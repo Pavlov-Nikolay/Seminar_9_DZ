@@ -4,16 +4,20 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-// Print(12, 1);
+Console.WriteLine();
+Print(12, 1);
 
-// void Print(int n, int i)
-// {
-//     Console.Write($"{i} ");
-//     if (i < n)
-//     {
-//         Print(n, i + 1);
-//     }
-// }
+void Print(int n, int i)
+{
+    Console.Write($"{i} ");
+    if (i < n)
+    {
+        Print(n, i + 1);
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine();
 
 //______________________________________________________________________________________
 
@@ -23,21 +27,23 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-// int M = 1;
-// int N = 15;
+int M = 1;
+int N = 15;
 
-// SummOfNumbers(M, N, 0);
+SummOfNumbers(M, N, 0);
 
-// void SummOfNumbers(int M, int N, int Sum)
-// {
-//     if (M > N)
-//     {
-//         Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {Sum}");
-//         return;
-//     }
-//     Sum = Sum + (M++);
-//     SummOfNumbers(M, N, Sum);
-// }
+void SummOfNumbers(int M, int N, int Sum)
+{
+    if (M > N)
+    {
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {Sum}");
+        return;
+    }
+    Sum = Sum + (M++);
+    SummOfNumbers(M, N, Sum);
+}
+
+Console.WriteLine();
 
 //______________________________________________________________________________________
 
@@ -59,3 +65,4 @@ int Akermann(int m, int n)
 
 Console.WriteLine($"Функция Аккермана для чисел A({m},{n}) = {Akermann(m, n)}");
 
+Console.WriteLine();
